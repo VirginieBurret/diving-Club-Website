@@ -17,7 +17,7 @@ router.put("/:id", async(req,res) => {
           const salt = await bcrypt.genSalt(10)
           req.body.password = await bcrypt.hash(req.body.password,salt);
     }catch(err){
-        return res.status(500).json(err)
+        return res.status(500).json(err.message)
     }
  }
  try{
@@ -26,7 +26,7 @@ router.put("/:id", async(req,res) => {
      });
      res.status(200).json('Account has been updated!');
     } catch (err){
-        return res.status(500).json(err);
+        return res.status(500).json(err.message);
     }
  
     }else{
@@ -44,7 +44,7 @@ router.delete("/:id", async(req,res) => {
        
      res.status(200).json('Account has been deleted!');
     } catch (err){
-        return res.status(500).json(err);
+        return res.status(500).json(err.message);
     }
  
     }else{
@@ -64,7 +64,7 @@ router.get("/:id", async (req,res) => {
         
     } catch (error) {
         
-        res.status(500).json(error)
+        res.status(500).json(error.message)
     }
 });
 
@@ -97,7 +97,7 @@ try {
 
     
 } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error.message)
 
    }
     
@@ -125,7 +125,7 @@ try {
 
     
 } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error.message)
 
    }
     
