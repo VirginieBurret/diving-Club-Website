@@ -3,6 +3,8 @@
   height:calc(100vh - 50px);// car notre top bar fait 50 px, comme ça, ça fit sans scroll 
   //background-color: green; pour check la taille
   overflow-y: scroll;
+  position: sticky;
+  top: 50px;
 }
 
 ::-webkit-scrollbar{
