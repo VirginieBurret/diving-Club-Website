@@ -4,7 +4,7 @@ import {Users} from '../../data';
 
 
 const RightBar = ({profile}) => {
-
+    //const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const HomeRightBar = () => {
         return (
        <>
@@ -58,17 +58,17 @@ const RightBar = ({profile}) => {
 
                 <div className="rightBarFollowing">
                   <img className="rightBarFollowingImg" src="/assets/person/cat.jpg" alt="" />
-                  <span className="rightbarFollowingName">Monicca Belluci</span>
+                  <span className="rightbarFollowingName">Jean Michel</span>
                 </div>
 
                 <div className="rightBarFollowing">
                   <img className="rightBarFollowingImg" src="/assets/person/cat.jpg" alt="" />
-                  <span className="rightbarFollowingName">Monicca Belluci</span>
+                  <span className="rightbarFollowingName">Jean charles</span>
                 </div>
 
                 <div className="rightBarFollowing">
                   <img className="rightBarFollowingImg" src="/assets/person/cat.jpg" alt="" />
-                  <span className="rightbarFollowingName">Monicca Belluci</span>
+                  <span className="rightbarFollowingName">Jean pierre</span>
                 </div>
 
                 <div className="rightBarFollowing">

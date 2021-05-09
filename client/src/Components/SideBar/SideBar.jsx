@@ -1,6 +1,7 @@
 import './sideBar.scss';
 import { RssFeed,Event,School,WorkOutline, HelpOutline,Bookmark,PlayCircleFilledOutlined, Group, Video,Chat} from '@material-ui/icons';
-
+import CloseFriend from '../CloseFriend/CloseFriend';
+import {Users} from '../../data'
 function SideBar() {
     return (
        <div className="sidebar">
@@ -41,70 +42,9 @@ function SideBar() {
               <hr className="sidebarHr"/>
 
               <ul className="sidebarFriendList">
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
-                  <li className="sidebarFriend">
-                      <img src="/assets/person/cat.jpg" alt="" className="sidebarFriendImg"/>
-                      <span className="sidebarFriendName">Virginie Burret</span>
-                  </li>
+              {Users.map((u) => (
+            <CloseFriend key={u.id} user={u} />
+          ))}
               </ul>
           </div>
        </div>
