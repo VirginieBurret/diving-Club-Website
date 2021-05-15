@@ -1,1 +1,1 @@
-# social-media-MERN
+# SEHVO website
